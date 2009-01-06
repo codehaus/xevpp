@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.codehaus.xevpp</groupId>
+    <artifactId>xevpp-impl</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <name>XML Events Verbatim Pull-Push</name>
+
+    <description>
+        A partial StAX (JSR-173) implementation which provides an XMLEventReader and an XMLEventWriter
+        capable of roundtrip writing a file that is completely identical to the original.
+    </description>
+
+    <organization>
+        <name>Codehaus</name>
+        <url>http://www.codehaus.org/</url>
+    </organization>
+
+    <scm>
+        <connection>scm:svn:https://svn.codehaus.org/xevpp/trunk</connection>
+        <developerConnection>scm:svn:https://svn.codehaus.org/xevpp/trunk</developerConnection>
+        <url>http://fisheye.codehaus.org/browse/xevpp/trunk</url>
+    </scm>
+
+    <issueManagement>
+        <system>jira</system>
+        <url>http://jira.codehaus.org/browse/XEVPP</url>
+    </issueManagement>
+
+    <distributionManagement>
+        <site>
+            <id>xevpp.codehaus.org</id>
+            <name>XEVPP Website</name>
+            <url>dav:https://dav.codehaus.org/xevpp/</url>
+        </site>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>stax</groupId>
+            <artifactId>stax-api</artifactId>
+            <version>[1.0.1,)</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>[4.4,)</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
