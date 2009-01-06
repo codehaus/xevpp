@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.codehaus.xevpp</groupId>
+    <artifactId>xevpp-pom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <name>XML Events Verbatim Pull-Push</name>
+
+    <description>
+        A partial StAX (JSR-173) implementation which provides an XMLEventReader and an XMLEventWriter
+        capable of roundtrip writing a file that is completely identical to the original.
+    </description>
+
+    <url>http://xevpp.codehaus.org/</url>
+
+    <organization>
+        <name>Codehaus</name>
+        <url>http://www.codehaus.org/</url>
+    </organization>
+
+    <mailingLists>
+        <mailingList>
+            <name>Development List</name>
+            <subscribe>dev-subscribe@xevpp.codehaus.org</subscribe>
+            <unsubscribe>dev-unsubscribe@xevpp.codehaus.org</unsubscribe>
+            <post>dev@xevpp.codehaus.org</post>
+            <archive>http://archive.hausfoundation.org/lists/org.codehaus.xevpp.dev</archive>
+        </mailingList>
+        <mailingList>
+            <name>User List</name>
+            <subscribe>user-subscribe@xevpp.codehaus.org</subscribe>
+            <unsubscribe>user-unsubscribe@xevpp.codehaus.org</unsubscribe>
+            <post>user@xevpp.codehaus.org</post>
+            <archive>http://archive.hausfoundation.org/lists/org.codehaus.xevpp.user</archive>
+        </mailingList>
+        <mailingList>
+            <name>Commits List</name>
+            <subscribe>scm-subscribe@xevpp.codehaus.org</subscribe>
+            <unsubscribe>scm-unsubscribe@xevpp.codehaus.org</unsubscribe>
+            <archive>http://archive.hausfoundation.org/lists/org.codehaus.xevpp.scm</archive>
+        </mailingList>
+    </mailingLists>
+
+    <scm>
+        <connection>scm:svn:https://svn.codehaus.org/xevpp/trunk</connection>
+        <developerConnection>scm:svn:https://svn.codehaus.org/xevpp/trunk</developerConnection>
+        <url>http://fisheye.codehaus.org/browse/xevpp/trunk</url>
+    </scm>
+
+    <issueManagement>
+        <system>jira</system>
+        <url>http://jira.codehaus.org/browse/XEVPP</url>
+    </issueManagement>
+
+    <distributionManagement>
+        <repository>
+           <id>codehaus.org</id>
+           <name>XEVPP Central Repository</name>
+           <url>dav:https://dav.codehaus.org/repository/xevpp/</url>
+        </repository>
+        <snapshotRepository>
+           <id>codehaus.org</id>
+           <name>XEVPP Central Development Repository</name>
+           <url>dav:https://dav.codehaus.org/snapshots.repository/xevpp/</url>
+        </snapshotRepository>
+        <site>
+            <id>codehaus.org</id>
+            <name>XEVPP Website</name>
+            <url>dav:https://dav.codehaus.org/xevpp/</url>
+        </site>
+    </distributionManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
