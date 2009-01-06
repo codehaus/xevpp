@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- User defined head content such as meta tags and encoding options -->
+  <meta http-equiv="content-type"
+        content="text/html; charset=utf-8" />
+  <meta name="robots"
+        content="all" />
+
+  <title>The Codehaus</title>
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="rw_common/themes/BusinessMedia/styles.css" />
+        <!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/BusinessMedia/ie6.css" /><![endif]-->
+  <link rel="stylesheet"
+        type="text/css"
+        media="print"
+        href="rw_common/themes/BusinessMedia/print.css" />
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen,print"
+        href="rw_common/themes/BusinessMedia/custom.css" />
+  <link rel="stylesheet"
+        type="text/css"
+        media="handheld"
+        href="rw_common/themes/BusinessMedia/handheld.css" />
+        <!-- Style variations -->
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href=
+        "rw_common/themes/BusinessMedia/css/styles/codehaus.css" />
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href=
+        "rw_common/themes/BusinessMedia/css/sidebar/right.css" />
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href=
+        "rw_common/themes/BusinessMedia/css/width/variable.css" />
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href=
+        "rw_common/themes/BusinessMedia/css/content/left.css" />
+        <!-- User defined styles -->
+
+<script type="text/javascript"
+      src="rw_common/themes/BusinessMedia/javascript.js">
+</script><!-- User defined javascript -->
+</head>
+
+<body>
+  <div id="container">
+    <!-- Start container -->
+
+    <div id="pageHeader">
+      <!-- Start page title wrapper -->
+
+      <div id="title"></div>
+
+      <div id='logo'>
+        <img src="rw_common/images/codehaus-with-haus-a.png"
+             width="312"
+             height="41"
+             alt="Site logo" />
+      </div>
+
+      <div id="navcontainer">
+        <!-- Start Navigation -->
+
+        <ul>
+          <li>
+            <a href="./"
+                rel="self"
+                id="current"
+                name="current">Home</a>
+
+            <ul>
+              <li><a href="featured.html"
+                 rel="self">Featured Project - Boo</a></li>
+            </ul>
+          </li>
+
+          <li><a href="search/"
+             rel="self">Search</a></li>
+
+          <li><a href="news/"
+             rel="self">News</a></li>
+
+          <li><a href="resources.html"
+             rel="self">Resources</a></li>
+
+          <li><a href="support/"
+             rel="self">Support</a></li>
+
+          <li><a href="customs/manifesto.html"
+             rel="self">Manifesto</a></li>
+
+          <li><a href="supporters/"
+             rel="self">Supporters</a></li>
+
+          <li><a href="about/"
+             rel="self">About</a></li>
+        </ul>
+      </div><!-- End navigation -->
+    </div><!-- End page title -->
+
+    <div id="sidebarContainer">
+      <!-- Start Sidebar wrapper -->
+
+      <div id="sidebar">
+        <!-- Start sidebar content -->
+
+        <h1 class="sideHeader"></h1><!-- Sidebar header -->
+
+        <h2>System News</h2>
+        <br />
+        <div class="news">
+  <div class="news-items">
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/123">Support for CVS repositories will be discontinued on the 31 March 2009</a>
+      </strong>
+      <small class="date">01/04/2009 06:36PM</small>
+<div class='description'>Support for CVS repositories will be discontinued on the 31 March 2009.
+At that point, a default migration of the CVS re...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/122">New IntelliJ 2009 licence</a>
+      </strong>
+      <small class="date">12/17/2008 09:13PM</small>
+<div class='description'>There is a new IntelliJ licence available for use with Codehaus project (and only Codehaus projects).
+Please see the Cod...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/121">FishEye upgrade to 1.6.4</a>
+      </strong>
+      <small class="date">11/27/2008 06:50PM</small>
+<div class='description'>FishEye will be upgraded to 1.6.4 from 2-4am 29 November 2008 (CST +0500)
+You can read the release notes at http://confl...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/120">Bamboo upgrade to 2.1.4</a>
+      </strong>
+      <small class="date">11/20/2008 02:46PM</small>
+<div class='description'>COMPLETE
+Bamboo will be upgraded to the latest version &#8211; 2.1.4
+The release notes are available at http://confluenc...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/119">JIRA Upgrade to 3.13.1</a>
+      </strong>
+      <small class="date">11/17/2008 12:39AM</small>
+<div class='description'>COMPLETE
+JIRA will be upgraded to the latest production release from Atlassian &#8211; 3.13.1...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/118">Confluence upgrade to 2.9.2</a>
+      </strong>
+      <small class="date">10/20/2008 10:39PM</small>
+<div class='description'>UPDATED There were some last minute compatibility issues with the staging instance; the upgrade has been pushed back to ...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/117">Confluence infrastructure changes</a>
+      </strong>
+      <small class="date">09/23/2008 06:47PM</small>
+<div class='description'>There will be intermittent outages to Confluence during the window to upgrade the JVM and make threading changes.
+This i...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/116">Fisheye upgrade</a>
+      </strong>
+      <small class="date">09/12/2008 05:17AM</small>
+<div class='description'>We&#8217;ve had quite a few issues with repositories; the recommendation from Atlassian is to upgrade; so we&#8217;re do...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/115">Spam attack</a>
+      </strong>
+      <small class="date">09/09/2008 08:38AM</small>
+<div class='description'>There is yet another fine spam attack occurring.
+There are 42K messages in the queue and they will take time to clear.
+W...</div>    </div>
+    <div class="news-item">
+      <strong>
+        <a class="title" href="http://xircles.codehaus.org/news/read/114">codehaus03 mail slow</a>
+      </strong>
+      <small class="date">08/27/2008 07:01PM</small>
+<div class='description'>Email is currently backed up due to DNS issues (that mean we can&#8217;t use the spamhaus DNS RBL). You WILL receive you...</div>    </div>
+  </div>
+</div>
+        <br />
+        <!-- sidebar content you enter in the page inspector -->
+         <!-- sidebar content such as the blog archive links -->
+      </div><!-- End sidebar content -->
+    </div><!-- End sidebar wrapper -->
+
+    <div id="contentContainer">
+      <!-- Start main content wrapper -->
+
+      <div class='google-ad google-ad-468x60'
+           style=
+           'text-align:left; padding-left: 0.3em; padding-top: 1.8em; border-bottom: 1px dotted #eee; margin: 0.3em'>
+      <script type="text/javascript">
+//<![CDATA[
+<!--
+                                                        google_ad_client = "pub-5267633279208525";
+                                                        google_ad_width = 728;
+                                                        google_ad_height = 90;
+                                                        google_ad_format = "728x90_as";
+                                                        google_ad_channel = "6469409996";
+                                                        google_color_border = "FFFFFF";
+                                                        google_color_bg = "FFFFFF";
+                                                        google_color_link = "009900";
+                                                        google_color_url = "009900";
+                                                        google_color_text = "3F3F3F";
+                                                        //-->
+//]]>
+</script> <script type="text/javascript"
+     src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+      </div>
+
+      <div id="content">
+        <!-- Start content -->
+
+        <h1>Welcome to the Haus</h1>
+        <br />
+        <span style=
+        "font:18px Times-Bold; font-weight:bold; font-weight:bold;">
+        “</span><span style="font-size:16px; font-weight:bold;">The
+        Codehaus</span><span style=
+        "font:18px Times-Bold; font-weight:bold; font-weight:bold;">”</span>
+        is a collaborative environment for building opensource
+        projects with a strong emphasis on modern languages,
+        focussed on quality components that meet real world needs.
+        <br />
+        <br />
+        We believe in open source as a pragmatic approach to
+        software development, and all our projects have <a href=
+        "customs/licenses.html"
+             rel="self"
+             title="Licenses">business-friendly licences</a>.
+        <br />
+        <br />
+        Enjoy your stay at the Haus!
+        <br />
+        <br />
+
+        <h1>Explore the Haus</h1>Take a look at our <a href=
+        "featured.html"
+             rel="self"
+             title="Featured Project - Boo">featured project -
+             Boo</a>
+        <br />
+        <br />
+        If that doesn’t take your fancy; then take a look through
+        some of our other <a href="resources.html"
+             rel="self"
+             title="Resources">starting points</a>.
+        <br />
+        <br />
+
+        <h1>Research the Haus</h1>See the <a href=
+        "support/faq.html"
+             rel="self"
+             title="FAQ">FAQ</a>.
+        <br />
+        <br />
+        See our <a href="customs/manifesto.html"
+             rel="self"
+             title="Manifesto">Manifesto</a> and <a href=
+             "customs/selection.html"
+             rel="self"
+             title="Project Selection">Project Selection</a>
+             guidelines.
+        <br />
+        <br />
+
+        <h1>Join the Haus</h1>If you want to join an existing
+        project, then you should signup using <a href=
+        "xircles/index.html"
+             rel="self"
+             title="Xircles">Xircles</a>. Once you’ve signed up
+             you’ll be able to apply for membership to projects or
+             create your own.
+        <br />
+        <br />
+        If you want to migrate a project to Codehaus, then you
+        should review the <a href="customs/selection.html"
+             rel="self"
+             title="Project Selection">project selection
+             criteria</a> and project migration guidelines.
+        <br />
+        <br />
+        <br />
+
+        <h1>Support the Haus</h1>If you want to <a href=
+        "supporters/advertising.html"
+             rel="self"
+             title="Advertising">support the Haus</a>, then we
+             can't encourage you enough!
+        <br />
+      </div><!-- End content -->
+
+      <div id='google-search'
+           style=
+           'margin: 0.5em; border-top: 1px dotted #eee; padding: 0 1em 0 1em'>
+      <p>Couldn't find what you were looking for?</p>
+
+        <p>Search all of Codehaus or the rest of the internet:</p>
+
+        <form action="http://codehaus.org/search/"
+              id="cse-search-box">
+          <div>
+            <input type="hidden"
+                 name="cx"
+                 value=
+                 "partner-pub-5267633279208525:7lwi4y48swq" />
+                 <input type="hidden"
+                 name="cof"
+                 value="FORID:10" /> <input type="hidden"
+                 name="ie"
+                 value="ISO-8859-1" /> <input type="text"
+                 name="q"
+                 size="31" /> <input type="submit"
+                 name="sa"
+                 value="Search" />
+          </div>
+        </form><script type="text/javascript"
+     src=
+     "http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en">
+</script>
+      </div><script type="text/javascript"
+     src=
+     "http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en">
+</script>
+    </div><!-- End main content wrapper -->
+
+    <div class="clearer"></div>
+
+    <div id="footer">
+      <!-- Start Footer -->
+
+      <div id="breadcrumbcontainer">
+        <!-- Start the breadcrumb wrapper -->
+
+        <ul>
+          <li><a href="./">Home</a>&nbsp;&gt;&nbsp;</li>
+        </ul>
+      </div><!-- End breadcrumb -->
+
+      <p>© 2004-2008 Codehaus <a href="#"
+         id="rw_email_contact"
+         name="rw_email_contact">Contact Us</a><script type=
+         "text/javascript">
+//<![CDATA[
+var _rwObsfuscatedHref0 = "mai";var _rwObsfuscatedHref1 = "lto";var _rwObsfuscatedHref2 = ":su";var _rwObsfuscatedHref3 = "ppo";var _rwObsfuscatedHref4 = "rt@";var _rwObsfuscatedHref5 = "cod";var _rwObsfuscatedHref6 = "eha";var _rwObsfuscatedHref7 = "us.";var _rwObsfuscatedHref8 = "org";var _rwObsfuscatedHref = _rwObsfuscatedHref0+_rwObsfuscatedHref1+_rwObsfuscatedHref2+_rwObsfuscatedHref3+_rwObsfuscatedHref4+_rwObsfuscatedHref5+_rwObsfuscatedHref6+_rwObsfuscatedHref7+_rwObsfuscatedHref8; document.getElementById('rw_email_contact').href = _rwObsfuscatedHref;
+//]]>
+</script></p>
+    </div><!-- End Footer -->
+
+    <div class="clearer"></div>
+  </div><!-- End container -->
+</body>
+</html>
