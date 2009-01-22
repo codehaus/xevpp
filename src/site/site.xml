@@ -2,29 +2,41 @@
     <bannerLeft>
         <name>xevpp</name>
         <alt>XEVPP</alt>
-        <src>http://xevppcodehaus.org/images/xevpp-project.png</src>
-        <href>http://xevppcodehaus.org</href>
+        <src>http://xevpp.codehaus.org/images/xevpp-project.png</src>
+        <href>http://xevpp.codehaus.org</href>
     </bannerLeft>
     <bannerRight>
         <name>Codehaus</name>
         <alt>The Codehaus</alt>
-        <src>http://xevppcodehaus.org/images/codehaus-small.png</src>
+        <src>http://xevpp.codehaus.org/images/codehaus-small.png</src>
         <href>http://codehaus.org</href>
     </bannerRight>
     <publishDate position="right" formay="yyyy-MMM-dd"/>
-    <!--skin>
+    <skin>
         <groupId>org.apache.maven.skins</groupId>
         <artifactId>maven-default-skin</artifactId>
         <version>1.0</version>
-    </skin-->
-  <poweredBy>
-    <logo name="Maven" href="http://maven.apache.org/"
-          img="http://maven.apache.org/images/logos/maven-feather.png"/>
-  </poweredBy>
+    </skin>
+    <poweredBy>
+        <logo name="Maven" href="http://maven.apache.org/"
+            img="http://maven.apache.org/images/logos/maven-feather.png"/>
+    </poweredBy>
 
     <body>
+        <breadcrumbs>
+            <item name="Codehaus" href="http://codehaus.org/"/>
+            <item name="XEVPP" href="http://xevpp.codehaus.org/"/>
+        </breadcrumbs>
+
         <links>
+            <item name="Woodstox" href="http://woodstox.apache.org/"/>
+            <item name="JSR-173" href="http://jcp.org/en/jsr/detail?id=173"/>
         </links>
+
+        <menu name="XEVPP">
+            <item name="Introduction" href="index.html"/>
+        </menu>
+
         <menu inherit="bottom" ref="reports"/>
     </body>
 </project>
