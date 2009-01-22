@@ -29,7 +29,7 @@
         </breadcrumbs>
 
         <links>
-            <item name="Woodstox" href="http://woodstox.mojo.org/"/>
+            <item name="Woodstox" href="http://woodstox.codehaus.org/"/>
             <item name="JSR-173" href="http://jcp.org/en/jsr/detail?id=173"/>
         </links>
 
