@@ -6,10 +6,15 @@
  2009-01-09
  ------
 
-XML Events Verbatim Pull Push (XEVPP)
+Welcome to the XML Events Verbatim Pull Push (XEVPP) Project
 
-XEVPP is a JSR-173 compliant XML pull parser and push writer that can be used in Event mode to copy an XML file byte for byte unmodified.
+  The XML Events Verbatim Pull Push (XEVPP) Project is a JSR-173 compliant XML pull 
+  parser and push writer that can be used
+  in Event mode to copy an XML file byte for byte unmodified.
 
-Current JSR-173 parsers are not capable of providing verbatim round-trip processing as they all base off of the XMLStreamReader. This implementation has XMLStreamReader based off XMLEventReader so that crazy additional formatting can be stored in the event objects.
+  Current JSR-173 parsers are not capable of providing verbatim round-trip 
+  processing as they all base off of the XMLStreamReader. This implementation 
+  has XMLStreamReader based off XMLEventReader so that crazy additional 
+  formatting can be stored in the event objects.
 
 
