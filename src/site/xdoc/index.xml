@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+  <properties>
+    <title>Introduction</title>
+    <author>Stephen Connolly</author>
+  </properties>
+
+  <body>
+
+    <section name="Welcome to the XML Events Verbatim Pull Push (XEVPP) Project">
+      <p>
+  The XML Events Verbatim Pull Push (XEVPP) Project is a JSR-173 compliant XML pull 
+  parser and push writer that can be used
+  in Event mode to copy an XML file byte for byte unmodified.
+      </p>
+      <p>
+  Current JSR-173 parsers are not capable of providing verbatim round-trip 
+  processing as they all base off of the XMLStreamReader. This implementation 
+  has XMLStreamReader based off XMLEventReader so that crazy additional 
+  formatting can be stored in the event objects.
+      </p>
+      <p>
+         <a href="http://www.java.net/"><img src="./images/javanet_button_170.gif" width="170px" height="47px" alt="java.net Member Button: 170px wide"/></a>
+      </p>
+    </section>
+  </body>
+</document>
+
