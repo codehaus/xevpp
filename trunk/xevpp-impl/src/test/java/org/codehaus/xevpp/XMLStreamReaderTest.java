@@ -46,6 +46,16 @@ public class XMLStreamReaderTest extends TestCase {
         }, xmlInputFactory);
     }
     
+    public void testComplexWoodstox() throws Exception {
+        XMLInputFactory xmlInputFactory = new WstxInputFactory();
+        xmlInputFactory.setProperty(XMLInputFactory.IS_COALESCING, Boolean.FALSE);
+        doTest(new InputStreamFactory(){
+            public InputStream newInstance() {
+                return getInputStream("/test-data/complex.xml");
+            }
+        }, xmlInputFactory);
+    }
+    
     public void doTest(InputStreamFactory inputStreamFactory, XMLInputFactory xmlInputFactory) throws Exception {
         XMLStreamReader xsr = xmlInputFactory.createXMLStreamReader(inputStreamFactory.newInstance());
         try {
@@ -60,13 +70,13 @@ public class XMLStreamReaderTest extends TestCase {
                     System.out.print(" <--> ");
                     System.out.println(decode(e2) + formatLocation(our.getLocation()));
 
-                    assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), e1, e2);
-                    assertEquals("Events is as expected", expected, e2);
+                    assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), decode(e1), decode(e2));
+                    assertEquals("Events is as expected", decode(expected), decode(e2));
                     assertEquals(xsr.hasNext(), our.hasNext());
                     if (xsr.hasNext() && our.hasNext()) {
                         e1 = xsr.next();
                         e2 = our.next();
-                        assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), e1, e2);
+                        assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), decode(e1), decode(e2));
                         expected = e2;
                     } else {
                         finished = true;
