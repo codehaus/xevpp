@@ -2,10 +2,7 @@ package org.codehaus.xevpp;
 
 import javax.xml.namespace.NamespaceContext;
 import javax.xml.namespace.QName;
-import javax.xml.stream.Location;
-import javax.xml.stream.XMLEventReader;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
+import javax.xml.stream.*;
 import javax.xml.stream.events.*;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -95,15 +92,17 @@ public class XMLStreamReaderImpl
     public void require(int type, String namespaceURI, String localName)
             throws XMLStreamException {
         if (current.getEventType() != type) {
-            throw new XMLStreamException();
+            throw new XMLStreamException("Require event of type " + type + " but actually " + current.getEventType(),
+                    getLocation());
         }
         if (namespaceURI != null && !namespaceURI.equals(currentStart.getName().getNamespaceURI())) {
-            throw new XMLStreamException();
+            throw new XMLStreamException("Require event with namespace " + namespaceURI + " but actually " 
+                    + currentStart.getName().getNamespaceURI(), getLocation());
         }
         if (localName != null && !localName.equals(currentStart.getName().getLocalPart())) {
-            throw new XMLStreamException();
+            throw new XMLStreamException("Require event with name '" + localName + "' but actually '" 
+                    + currentStart.getName().getLocalPart() + "'", getLocation());
         }
-
     }
 
     /**
@@ -152,13 +151,30 @@ public class XMLStreamReaderImpl
      */
     public String getElementText()
             throws XMLStreamException {
-        if (!current.isStartElement()) {
-            throw new XMLStreamException();
+        if (getEventType() != XMLStreamConstants.START_ELEMENT) {
+            throw new XMLStreamException("parser must be on START_ELEMENT to read next text", getLocation());
         }
-        String result = delegate.getElementText();
-        // TODO figure out how to satisfy the post-condition
-        return result;
-
+        int eventType = next();
+        StringBuffer content = new StringBuffer();
+        while (eventType != XMLStreamConstants.END_ELEMENT) {
+            if (eventType == XMLStreamConstants.CHARACTERS
+                    || eventType == XMLStreamConstants.CDATA
+                    || eventType == XMLStreamConstants.SPACE
+                    || eventType == XMLStreamConstants.ENTITY_REFERENCE) {
+                content.append(getText());
+            } else if (eventType == XMLStreamConstants.PROCESSING_INSTRUCTION
+                    || eventType == XMLStreamConstants.COMMENT) {
+                // skipping
+            } else if (eventType == XMLStreamConstants.END_DOCUMENT) {
+                throw new XMLStreamException("unexpected end of document when reading element text content", getLocation());
+            } else if (eventType == XMLStreamConstants.START_ELEMENT) {
+                throw new XMLStreamException("element text content may not contain START_ELEMENT", getLocation());
+            } else {
+                throw new XMLStreamException("Unexpected event type " + eventType, getLocation());
+            }
+            eventType = next();
+        }
+        return content.toString();
     }
 
     /**
