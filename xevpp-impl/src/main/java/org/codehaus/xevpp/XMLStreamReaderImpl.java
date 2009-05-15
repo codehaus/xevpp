@@ -1,5 +1,7 @@
 package org.codehaus.xevpp;
 
+import org.codehaus.xevpp.events.StartDocumentImpl;
+
 import javax.xml.namespace.NamespaceContext;
 import javax.xml.namespace.QName;
 import javax.xml.stream.*;
@@ -16,12 +18,17 @@ public class XMLStreamReaderImpl
         implements XMLStreamReader {
     private final XMLEventReader delegate;
 
-    private XMLEvent current = null;
+    private XMLEvent current;
 
     private StartElement currentStart = null;
 
     public XMLStreamReaderImpl(XMLEventReader delegate) {
         this.delegate = delegate;
+        try {
+            next();
+        } catch (XMLStreamException e) {
+            // hmmm
+        }
     }
 
     /**
@@ -75,7 +82,7 @@ public class XMLStreamReaderImpl
         if (current.isStartElement()) {
             currentStart = current.asStartElement();
         }
-        return current.getEventType();
+        return getEventType();
     }
 
     /**
@@ -507,6 +514,12 @@ public class XMLStreamReaderImpl
      * of the event the cursor is pointing to.
      */
     public int getEventType() {
+        switch (current.getEventType()) {
+            case CHARACTERS:
+                if (current.asCharacters().isWhiteSpace()) {
+                    return SPACE;
+                }
+        }        
         return current.getEventType();
     }
 
