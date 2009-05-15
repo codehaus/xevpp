@@ -30,7 +30,8 @@ public class XMLStreamReaderTest extends TestCase {
             System.out.print(e1);
             System.out.print(" <--> ");
             System.out.println(e2);
-            assertEquals("Events are the same", e1, e2);
+            
+            assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), e1, e2);
             assertEquals(xsr.hasNext(), our.hasNext());
         }
             } finally {
