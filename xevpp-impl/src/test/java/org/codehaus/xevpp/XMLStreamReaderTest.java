@@ -1,15 +1,14 @@
 package org.codehaus.xevpp;
 
+import com.ctc.wstx.stax.WstxInputFactory;
+import com.sun.xml.internal.stream.*;
 import junit.framework.TestCase;
 
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamReader;
-import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.Location;
-import javax.xml.XMLConstants;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamConstants;
+import javax.xml.stream.XMLStreamReader;
 import java.io.InputStream;
-
-import com.ctc.wstx.stax.WstxInputFactory;
 
 /**
  * Created by IntelliJ IDEA.
@@ -22,43 +21,65 @@ public class XMLStreamReaderTest extends TestCase {
     private static InputStream getInputStream(String resourceName) {
         return XMLStreamReaderTest.class.getResourceAsStream(resourceName);
     }
+
+    public static interface InputStreamFactory {
+        InputStream newInstance();
+    }
     
-    public void testSimple() throws Exception {
-        XMLInputFactory inF = new WstxInputFactory();
-        inF.setProperty(XMLInputFactory.IS_COALESCING, Boolean.FALSE);
-        XMLStreamReader xsr = inF.createXMLStreamReader(getInputStream("/test-data/simple.xml"));
+    public void testSimpleWoodstox() throws Exception {
+        XMLInputFactory xmlInputFactory = new WstxInputFactory();
+        xmlInputFactory.setProperty(XMLInputFactory.IS_COALESCING, Boolean.FALSE);
+        doTest(new InputStreamFactory(){
+            public InputStream newInstance() {
+                return getInputStream("/test-data/simple.xml");
+            }
+        }, xmlInputFactory);
+    }
+    
+    public void testSimpleSun() throws Exception {
+        XMLInputFactory xmlInputFactory = new com.sun.xml.internal.stream.XMLInputFactoryImpl();
+        xmlInputFactory.setProperty(XMLInputFactory.IS_COALESCING, Boolean.FALSE);
+        doTest(new InputStreamFactory(){
+            public InputStream newInstance() {
+                return getInputStream("/test-data/simple.xml");
+            }
+        }, xmlInputFactory);
+    }
+    
+    public void doTest(InputStreamFactory inputStreamFactory, XMLInputFactory xmlInputFactory) throws Exception {
+        XMLStreamReader xsr = xmlInputFactory.createXMLStreamReader(inputStreamFactory.newInstance());
         try {
-        XMLStreamReader our = new XMLStreamReaderImpl(inF.createXMLEventReader(getInputStream("/test-data/simple.xml")));
+            XMLStreamReader our = new XMLStreamReaderImpl(xmlInputFactory.createXMLEventReader(inputStreamFactory.newInstance()));
             try {
                 boolean finished = false;
                 int expected = XMLStreamConstants.START_DOCUMENT;
-        while (!finished) {
-            int e1 = xsr.getEventType();
-            int e2 = our.getEventType();
-            System.out.print(decode(e1) + formatLocation(xsr.getLocation()));
-            System.out.print(" <--> ");
-            System.out.println(decode(e2) + formatLocation(our.getLocation()));
-            
-            assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), e1, e2);
-            assertEquals("Events is as expected", expected, e2);
-            assertEquals(xsr.hasNext(), our.hasNext());
-            if (xsr.hasNext() && our.hasNext()) {
-                e1 = xsr.next();
-                e2 = our.next();
-                assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), e1, e2);
-                expected = e2;
-            } else {
-                finished = true;
-            }
-            
-        }
+                while (!finished) {
+                    int e1 = xsr.getEventType();
+                    int e2 = our.getEventType();
+                    System.out.print(decode(e1) + formatLocation(xsr.getLocation()));
+                    System.out.print(" <--> ");
+                    System.out.println(decode(e2) + formatLocation(our.getLocation()));
+
+                    assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), e1, e2);
+                    assertEquals("Events is as expected", expected, e2);
+                    assertEquals(xsr.hasNext(), our.hasNext());
+                    if (xsr.hasNext() && our.hasNext()) {
+                        e1 = xsr.next();
+                        e2 = our.next();
+                        assertEquals("Events are the same: " + xsr.getLocation() + ", " + our.getLocation(), e1, e2);
+                        expected = e2;
+                    } else {
+                        finished = true;
+                    }
+
+                }
             } finally {
                 our.close();
             }
         } finally {
             xsr.close();
         }
-        
+
     }
 
     private static String formatLocation(Location loc) {
@@ -98,6 +119,6 @@ public class XMLStreamReaderTest extends TestCase {
             case XMLStreamConstants.ENTITY_DECLARATION:
                 return "ENTITY_DECLARATION";
         }
-        return "UNKNOWN_"+Integer.toString(c);
+        return "UNKNOWN_" + Integer.toString(c);
     }
 }
