@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<!-- more fun -->
+
+<root fee='foo'
+
+      fi=
+
+          "Fo
+
+&amp;
+
+Fum"
+
+    >
+  &lt;ignore&gt;
+
+  <![CDATA[ 
+<fred was a charmer>
+]]>
+</root>
