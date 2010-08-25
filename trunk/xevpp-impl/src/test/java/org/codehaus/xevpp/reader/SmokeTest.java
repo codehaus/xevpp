@@ -2,10 +2,13 @@ package org.codehaus.xevpp.reader;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.codehaus.xevpp.XMLEventReaderImpl;
 
+import javax.xml.stream.XMLEventReader;
 import java.io.InputStream;
 import java.io.ByteArrayInputStream;
 import java.io.Reader;
+import java.io.InputStreamReader;
 
 /**
  * Created by IntelliJ IDEA.
@@ -36,5 +39,20 @@ public class SmokeTest {
         assertEquals(source, target.toString());
 
         assertTrue(true);
+    }
+
+    @Test
+    public void simple2() throws Exception {
+        final String source = "<!--\r" +
+                "comment\n\r" +
+                "more\r\n" +
+                "again\r" +
+                "--><root>\n" +
+                "    < child />  \t<child >\t\t</root>\n\n\n";
+        InputStream is = new ByteArrayInputStream(source.getBytes("UTF-8"));
+        XMLEventReader reader = new XMLEventReaderImpl( new InputStreamReader(is) );
+        while (reader.hasNext()) {
+            System.out.println(reader.next());
+        }
     }
 }

@@ -1,8 +1,23 @@
-<?xml version="1.0" ?>
+<?xml 
+    
+    version="1.0" 
+    
+    encoding="utf-8" 
+    
+    
+    
+    standalone='yes' 
+    
+    
+    
+    ?>
 
 <!-- more fun -->
-
-<root fee='foo'
+  
+    <?xmlFoo is fun ?>
+    
+    
+<    root fee='foo'
 
       fi=
 
@@ -18,4 +33,4 @@ Fum"
   <![CDATA[ 
 <fred was a charmer>
 ]]>
-</root>
+</   root    >
