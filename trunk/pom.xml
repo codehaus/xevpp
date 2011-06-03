@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.codehaus</groupId>
         <artifactId>codehaus-parent</artifactId>
-        <version>1</version>
+        <version>4</version>
     </parent>
 
     <groupId>org.codehaus.xevpp</groupId>
@@ -19,7 +19,7 @@
       <module>xevpp-impl</module>
     </modules>
   
-    <name>XML Events Verbatim Pull-Push</name>
+    <name>XML Events Verbatim Pull-Push (parent)</name>
 
     <description>
         A partial StAX (JSR-173) implementation which provides an XMLEventReader and an XMLEventWriter
